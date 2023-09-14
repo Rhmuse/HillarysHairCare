@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button, Table } from 'reactstrap';
-import { getStylists } from '../data/stylistsData';
+import { getStylists } from '../../data/stylistData';
 
 export const StylistList = () => {
 	const [stylists, setStylists] = useState([]);

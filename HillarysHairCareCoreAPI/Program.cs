@@ -1,5 +1,6 @@
 using HillarysHairCareCoreAPI;
 using Microsoft.AspNetCore.Http.Json;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,10 +33,41 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+#region Stylist
+
 app.MapGet("/stylists", (HillarysHairCareDbContext db) =>
 {
     return Results.Ok(db.Stylists);
 });
+
+#endregion
+
+#region Appointment
+
+app.MapGet("/appointments", (HillarysHairCareDbContext db) =>
+{
+    var appointments = db.Appointments
+        .Include(a => a.Stylist)
+        .Include(a => a.Customer)
+        .Include(a => a.AppointmentServices)
+        .ThenInclude(a => a.Service)
+        .OrderBy(a => a.Id)
+        .ToList();
+
+    return Results.Ok(appointments);
+});
+
+#endregion
+
+#region Customer
+
+app.MapGet("/customers", (HillarysHairCareDbContext db) =>
+{
+    return Results.Ok(db.Customers);
+});
+
+#endregion
+
 
 app.Run();
 
