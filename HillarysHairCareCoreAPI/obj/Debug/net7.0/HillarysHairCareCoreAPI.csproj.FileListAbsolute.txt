@@ -41,3 +41,6 @@ C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\obj\Debug\n
 C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\obj\Debug\net7.0\HillarysHairCareCoreAPI.pdb
 C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\obj\Debug\net7.0\HillarysHairCareCoreAPI.genruntimeconfig.cache
 C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\obj\Debug\net7.0\ref\HillarysHairCareCoreAPI.dll
+C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\bin\Debug\net7.0\client\public\manifest.json
+C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\bin\Debug\net7.0\client\package-lock.json
+C:\Users\Rhett\source\repos\HillarysHairCare\HillarysHairCareCoreAPI\bin\Debug\net7.0\client\package.json

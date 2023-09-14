@@ -32,5 +32,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/stylists", (HillarysHairCareDbContext db) =>
+{
+    return Results.Ok(db.Stylists);
+});
+
 app.Run();
 
