@@ -13,6 +13,9 @@ function App() {
 					<NavItem>
 						<NavLink href='/appointments'>Appointments</NavLink>
 					</NavItem>
+					<NavItem>
+						<NavLink href='/customers'>Customers</NavLink>
+					</NavItem>
 				</Nav>
 			</Navbar>
 			<Outlet />
