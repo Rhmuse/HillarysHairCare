@@ -11,5 +11,6 @@ namespace HillarysHairCareCoreAPI.Models
         [Required]
         public int ServiceId { get; set; }
         public Service? Service { get; set; }
+        public bool IsCanceled { get; set; }
     }
 }

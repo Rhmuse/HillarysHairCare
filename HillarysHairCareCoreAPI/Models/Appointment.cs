@@ -16,10 +16,10 @@ namespace HillarysHairCareCoreAPI.Models
         {
             get
             {
-                decimal total = 0M;
+                decimal? total = 0M;
                 AppointmentServices?.ForEach(a =>
                 {
-                    total += a.Service.Cost;
+                    total += a?.Service?.Cost;
                 });
                 return total;
             }

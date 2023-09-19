@@ -6,6 +6,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { StylistList } from './components/stylist/StylistList';
 import { AppointmentList } from './components/appointment/AppointmentList';
 import { CustomerList } from './components/customer/CustomerList';
+import { AppointmentForm } from './components/appointment/AppointmentForm';
+import { CustomerForm } from './components/customer/CustomerForm';
+import { StylistForm } from './components/stylist/StylistForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,12 +18,15 @@ root.render(
         <Route index element={<AppointmentList />} />
         <Route path='stylists'>
           <Route index element={<StylistList />} />
+          <Route path='create' element={<StylistForm />} />
         </Route>
         <Route path='appointments'>
           <Route index element={<AppointmentList />} />
+          <Route path='create' element={<AppointmentForm />} />
         </Route>
         <Route path='customers'>
           <Route index element={<CustomerList />} />
+          <Route path='create' element={<CustomerForm />} />
         </Route>
       </Route>
     </Routes>
